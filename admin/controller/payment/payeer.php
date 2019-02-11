@@ -164,15 +164,6 @@ class ControllerPaymentpayeer extends Controller {
 			$data['payeer_security'] = $this->config->get('payeer_security');
 		}
 
-		if (isset($this->request->post['payeer_sort_order'])) 
-		{
-			$data['payeer_sort_order'] = $this->request->post['payeer_sort_order'];
-		} 
-		else 
-		{
-			$data['payeer_sort_order'] = $this->config->get('payeer_sort_order');
-		}
-
 		if (isset($this->request->post['payeer_order_wait_id'])) 
 		{
 			$data['payeer_order_wait_id'] = $this->request->post['payeer_order_wait_id'];
@@ -207,7 +198,7 @@ class ControllerPaymentpayeer extends Controller {
 		
 		if (isset($this->request->post['payeer_order_fail_id'])) 
 		{
-			$data['payeer_order_success_id'] = $this->request->post['payeer_order_fail_id'];
+			$data['payeer_order_fail_id'] = $this->request->post['payeer_order_fail_id'];
 		}
 		else 
 		{

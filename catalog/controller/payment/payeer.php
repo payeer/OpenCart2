@@ -13,7 +13,9 @@ class ControllerPaymentPayeer extends Controller
 		$data['m_shop'] = $this->config->get('payeer_merchant');
 		$data['m_orderid'] = $this->session->data['order_id'];
 		$data['m_amount'] = $this->currency->format($order_info['total'], $order_info['currency_code'], $order_info['currency_value'], false);
-		$data['m_curr'] = $order_info['currency_code'];
+		$data['m_amount'] = number_format($data['m_amount'], 2, '.', '');
+		$m_curr = strtoupper($order_info['currency_code']);
+		$data['m_curr'] = ($m_curr == 'RUR') ? 'RUB' : $m_curr;
 		$data['m_desc'] = base64_encode($order_info['comment']);
 		$arHash = array(
 			$data['m_shop'],
