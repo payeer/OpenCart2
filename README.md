@@ -1,8 +1,8 @@
 OpenCart 2.x
 ======
-Модуль оплаты Payeer
+Payment module Payeer
 
-Для установки модуля скачайте и распакуйте архив.
-Далее следуйте прилагаемой инструкции
+To install the module, download and unzip the archive.
+Then follow the attached instructions.
 
-Поддерживаемая версия CMS OpenCart 2.x
+Support for CMS OpenCart 2.x
